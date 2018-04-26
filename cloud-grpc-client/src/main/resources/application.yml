@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cloud-grpc-client
+  sleuth:
+    sampler:
+      percentage: 1
+  zipkin:
+    base-url: http://localhost:9412
+          
+#spring.zipkin.base-url=http://192.168.16.40:30009    
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
